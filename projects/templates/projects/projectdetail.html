@@ -1,0 +1,23 @@
+{% extends 'projects/base.html' %}
+{%load static%}
+{%block content%}
+    <div class="container">
+        <h1 class="card-header">{{project.title}}</h1>
+        <div class="row" m-top="10" >
+                <div class="col-md-6">
+                    <div class="card mt-4">
+                        <img class="img-thumbnail" src="{% static project.image %}" alt="image for project" width="600" height="200">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card mt-4">
+                        <div class="class-body">
+                            <p class="card-title"><b>About the project</b><p>
+                            <p class="card-text">{{project.description}}</p>
+                            <p class="card-text"><b>Tech-stack: </b>{{project.technology}}</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+{%endblock%}
